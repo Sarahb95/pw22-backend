@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>{styles}</style>
+</head>
+<body>
+  <table class="wrapper" width="100%" cellpadding="0" cellspacing="0">
+    <tr><td align="center">
+      <table class="container" cellpadding="0" cellspacing="0">
+
+        <!-- Intestazione hero -->
+        <tr><td class="header">
+          <span class="header-eyebrow">Nuovo Cinema &middot; Teatro</span>
+          <span class="header-title">&ldquo;ELISEO&rdquo;</span>
+          <span class="header-sub">Stagione 26 &middot; 27</span>
+        </td></tr>
+
+        <!-- Striscia pellicola -->
+        <tr class="film-row"><td></td></tr>
+
+        <!-- Card prenotazione -->
+        <tr><td class="card">
+          <span class="confirm-label">&#10003; Confermato</span>
+          <p class="confirm-title">Prenotazione confermata</p>
+          <p class="confirm-sub">Ciao {nome}, il tuo posto all&rsquo;Eliseo &egrave; riservato.</p>
+
+          <p class="show-title">{spettacolo}</p>
+          <p class="show-meta">{dataOra} &middot; {sala}</p>
+
+          <table class="detail-box" width="100%" cellpadding="0" cellspacing="0">
+            <tr><td class="detail-label">Posti prenotati</td></tr>
+            <tr><td class="detail-value">{posti}</td></tr>
+          </table>
+
+          <table class="total-row" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="total-label">Totale pagato</td>
+              <td align="right" class="total-value">{prezzo}</td>
+            </tr>
+          </table>
+          <p class="booking-number">N&deg; prenotazione: {bookingId}</p>
+        </td></tr>
+
+        <!-- Striscia pellicola -->
+        <tr class="film-row"><td></td></tr>
+
+        <!-- Footer dark -->
+        <tr><td class="footer">
+          Via XX Settembre, Poggiomarino (NA)<br>
+          Messaggio automatico generato dalla piattaforma Eliseo.
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

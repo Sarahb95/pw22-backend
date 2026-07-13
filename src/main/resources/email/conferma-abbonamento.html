@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>{styles}</style>
+</head>
+<body>
+  <table class="wrapper" width="100%" cellpadding="0" cellspacing="0">
+    <tr><td align="center">
+      <table class="container" cellpadding="0" cellspacing="0">
+
+        <!-- Intestazione hero -->
+        <tr><td class="header">
+          <span class="header-eyebrow">Nuovo Cinema &middot; Teatro</span>
+          <span class="header-title">&ldquo;ELISEO&rdquo;</span>
+          <span class="header-sub">Stagione 26 &middot; 27</span>
+        </td></tr>
+
+        <!-- Striscia pellicola -->
+        <tr class="film-row"><td></td></tr>
+
+        <!-- Card abbonamento -->
+        <tr><td class="card">
+          <span class="confirm-label">&#10003; Attivato</span>
+          <p class="confirm-title">Abbonamento attivato</p>
+          <p class="confirm-sub">Ciao {nome}, il tuo abbonamento &egrave; attivo.</p>
+
+          <table class="detail-box" width="100%" cellpadding="0" cellspacing="0">
+            <tr><td class="detail-label">Tipo abbonamento</td></tr>
+            <tr><td>
+              <span class="detail-value-large">{tipo}</span>
+              <span class="detail-validity">valido fino al {dataFine}</span>
+            </td></tr>
+          </table>
+
+          <table class="total-row" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="total-label">Importo pagato</td>
+              <td align="right" class="total-value">{prezzo}</td>
+            </tr>
+          </table>
+          <p class="booking-number">N&deg; abbonamento: {abbId}</p>
+        </td></tr>
+
+        <!-- Striscia pellicola -->
+        <tr class="film-row"><td></td></tr>
+
+        <!-- Footer dark -->
+        <tr><td class="footer">
+          Via XX Settembre, Poggiomarino (NA)<br>
+          Messaggio automatico generato dalla piattaforma Eliseo.
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
