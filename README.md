@@ -7,15 +7,15 @@ REST API del **Nuovo Cinema Teatro Eliseo di Poggiomarino** — elaborato finale
 - Java 17 · Spring Boot 3.3.4 · Maven
 - H2 in-memory (sviluppo) · MySQL 8 (produzione)
 - Hibernate 6 · Spring Data JPA
-- JavaMailSender (SMTP Gmail)
+- Brevo HTTP API (email transazionali)
 
 ## Avvio locale
 
 ```bash
-MAIL_USERNAME="cte.eliseo.demo@gmail.com" \
-MAIL_PASSWORD="<app-password>" \
 mvn spring-boot:run
 ```
+
+Senza `BREVO_API_KEY` le email non vengono inviate ma sono tracciate nel log con il prefisso `[EMAIL-MOCK]`.
 
 Il server parte sulla porta `8080`. La console H2 è disponibile su `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:mem:eliseo_db`).
 
@@ -50,8 +50,8 @@ src/main/resources/
 
 | Variabile | Descrizione |
 |-----------|-------------|
-| `MAIL_USERNAME` | Indirizzo Gmail mittente |
-| `MAIL_PASSWORD` | App password Gmail (16 caratteri) |
+| `BREVO_API_KEY` | Chiave API Brevo per l'invio di email transazionali |
+| `MAIL_USERNAME` | Indirizzo mittente verificato su Brevo (default: `cte.eliseo.demo@gmail.com`) |
 | `PORT` | Porta server (default: `8080`) |
 
 ## Build
