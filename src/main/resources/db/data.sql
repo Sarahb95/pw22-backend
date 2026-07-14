@@ -215,19 +215,19 @@ INSERT INTO prenotazione (utente_id, replica_id, posto_id) VALUES
     (1, 4, 65);
 
 -- ----- LOCANDINE ------------------------------------------------------
-UPDATE spettacolo SET locandina_url = '/assets/godot.jpg'            WHERE titolo = 'Aspettando Godot';
-UPDATE spettacolo SET locandina_url = '/assets/romeoegiulietta.jpg'  WHERE titolo = 'Romeo e Giulietta';
-UPDATE spettacolo SET locandina_url = '/assets/bayadere.jpg'         WHERE titolo = 'La Bayadère';
-UPDATE spettacolo SET locandina_url = '/assets/carmen.jpg'           WHERE titolo = 'La Carmen';
-UPDATE spettacolo SET locandina_url = '/assets/donquixote.jpg'       WHERE titolo = 'Don Chisciotte';
-UPDATE spettacolo SET locandina_url = '/assets/parthenope.jpg'       WHERE titolo = 'Parthenope';
-UPDATE spettacolo SET locandina_url = '/assets/mano-di-dio.jpg'      WHERE titolo = 'È stata la mano di Dio';
-UPDATE spettacolo SET locandina_url = '/assets/oppenheimer.jpg'      WHERE titolo = 'Oppenheimer';
-UPDATE spettacolo SET locandina_url = '/assets/pulp-fiction.jpg'     WHERE titolo = 'Pulp Fiction';
-UPDATE spettacolo SET locandina_url = '/assets/kill-bill.jpg'        WHERE titolo = 'Kill Bill';
-UPDATE spettacolo SET locandina_url = '/assets/corpo-che-pensa.jpg'  WHERE titolo = 'Salotto filosofico: il corpo che pensa';
-UPDATE spettacolo SET locandina_url = '/assets/domanda-di-senso.jpg' WHERE titolo LIKE 'Cinema e silenzio%';
-UPDATE spettacolo SET locandina_url = '/assets/arendt.jpg'           WHERE titolo LIKE 'Omaggio a Hannah Arendt%';
+UPDATE spettacolo SET locandina_url = 'assets/godot.jpg'            WHERE titolo = 'Aspettando Godot';
+UPDATE spettacolo SET locandina_url = 'assets/romeoegiulietta.jpg'  WHERE titolo = 'Romeo e Giulietta';
+UPDATE spettacolo SET locandina_url = 'assets/bayadere.jpg'         WHERE titolo = 'La Bayadère';
+UPDATE spettacolo SET locandina_url = 'assets/carmen.jpg'           WHERE titolo = 'La Carmen';
+UPDATE spettacolo SET locandina_url = 'assets/donquixote.jpg'       WHERE titolo = 'Don Chisciotte';
+UPDATE spettacolo SET locandina_url = 'assets/parthenope.jpg'       WHERE titolo = 'Parthenope';
+UPDATE spettacolo SET locandina_url = 'assets/mano-di-dio.jpg'      WHERE titolo = 'È stata la mano di Dio';
+UPDATE spettacolo SET locandina_url = 'assets/oppenheimer.jpg'      WHERE titolo = 'Oppenheimer';
+UPDATE spettacolo SET locandina_url = 'assets/pulp-fiction.jpg'     WHERE titolo = 'Pulp Fiction';
+UPDATE spettacolo SET locandina_url = 'assets/kill-bill.jpg'        WHERE titolo = 'Kill Bill';
+UPDATE spettacolo SET locandina_url = 'assets/corpo-che-pensa.jpg'  WHERE titolo = 'Salotto filosofico: il corpo che pensa';
+UPDATE spettacolo SET locandina_url = 'assets/domanda-di-senso.jpg' WHERE titolo LIKE 'Cinema e silenzio%';
+UPDATE spettacolo SET locandina_url = 'assets/arendt.jpg'           WHERE titolo LIKE 'Omaggio a Hannah Arendt%';
 
 -- ----- ABBONAMENTI ---------------------------------------------------
 INSERT INTO abbonamento (utente_id, tipo, data_inizio, data_fine, prezzo) VALUES
