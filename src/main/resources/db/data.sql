@@ -5,14 +5,11 @@
 
 -- ----- UTENTI ---------------------------------------------------------
 -- Le password mostrate sono hash BCrypt di stringhe note:
---   admin@eliseo.it  -> password: admin123
---   mario@example.it -> password: mario123
---   lucia@example.it -> password: lucia123
-INSERT INTO utente (email, password_hash, nome, cognome, data_nascita, ruolo) VALUES
-    ('admin@eliseo.it',  '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'Anna',  'Esposito', DATE '1985-03-12', 'ADMIN'),
-    ('mario@example.it', '$2a$10$DowJonesA1B2C3D4E5F6gH7I8J9K0L1M2N3O4P5Q6R7S8T9U0VW', 'Mario', 'Bianchi',  DATE '1990-07-22', 'CLIENTE'),
-    ('lucia@example.it', '$2a$10$KixCQX5wU1Y2Z3a4B5C6D7E8F9G0H1I2J3K4L5M6N7O8P9Q0R1ST', 'Lucia', 'Verdi',    DATE '2003-11-05', 'CLIENTE'),
-    ('sarah@eliseo.it',  '$2a$10$PlaceHolderPlaceHolderPlaceHolderPlaceHolderPlaceHolde', 'Sarah', 'Boccia',   DATE '2002-09-18', 'ADMIN');
+--   marco@example.it  -> password: marco123
+--   giulia@example.it -> password: giulia123
+INSERT INTO utente (email, password_hash, nome, cognome, data_nascita) VALUES
+    ('marco@example.it',  '$2a$10$PlaceHolderPlaceHolderPlaceHolderPlaceHolderPlaceHolde', 'Marco',  'Ferraro',  DATE '1988-09-14'),
+    ('giulia@example.it', '$2a$10$PlaceHolderPlaceHolderPlaceHolderPlaceHolderPlaceHolde', 'Giulia', 'De Rosa',  DATE '2004-02-20');
 
 -- ----- SALE -----------------------------------------------------------
 INSERT INTO sala (nome, capienza, descrizione) VALUES
@@ -213,9 +210,9 @@ INSERT INTO replica (spettacolo_id, sala_id, data_ora, prezzo_base) VALUES
 -- replica 1 = Godot 9/7 (sala 1): posti 15, 16, 25, 26 ✓
 -- replica 4 = Salotto 13/7 (sala 2): posto 65 (fila A, num 5, sala 2) ✓
 INSERT INTO prenotazione (utente_id, replica_id, posto_id) VALUES
-    (2, 1, 15), (2, 1, 16),
-    (3, 1, 25), (3, 1, 26),
-    (2, 4, 65);
+    (1, 1, 15), (1, 1, 16),
+    (2, 1, 25), (2, 1, 26),
+    (1, 4, 65);
 
 -- ----- LOCANDINE ------------------------------------------------------
 UPDATE spettacolo SET locandina_url = '/assets/godot.jpg'            WHERE titolo = 'Aspettando Godot';
@@ -234,4 +231,4 @@ UPDATE spettacolo SET locandina_url = '/assets/arendt.jpg'           WHERE titol
 
 -- ----- ABBONAMENTI ---------------------------------------------------
 INSERT INTO abbonamento (utente_id, tipo, data_inizio, data_fine, prezzo) VALUES
-    (2, 'STAGIONALE', DATE '2026-01-01', DATE '2026-12-31', 90.00);
+    (1, 'STAGIONALE', DATE '2026-01-01', DATE '2027-06-30', 90.00);

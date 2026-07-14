@@ -18,9 +18,7 @@ CREATE TABLE utente (
     nome            VARCHAR(80)  NOT NULL,
     cognome         VARCHAR(80)  NOT NULL,
     data_nascita    DATE,
-    ruolo           VARCHAR(20)  NOT NULL DEFAULT 'CLIENTE',
-    data_iscrizione TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT chk_utente_ruolo CHECK (ruolo IN ('CLIENTE','ADMIN'))
+    data_iscrizione TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE sala (
