@@ -30,7 +30,7 @@ public class EmailService {
 
     public EmailService(
             @Value("${brevo.api.key:}") String apiKey,
-            @Value("${spring.mail.username:}") String fromAddress,
+            @Value("${brevo.from.email:}") String fromAddress,
             ObjectMapper objectMapper) throws IOException {
         this.apiKey = apiKey;
         this.fromAddress = fromAddress;
